@@ -1,0 +1,179 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+/***********************************************/
+/* Utilities */
+/***********************************************/
+
+.debug {
+  border: 1px red solid;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.w-15 {
+  max-width: 15%;
+}
+
+/* Buttons */
+
+.btn {
+  color: #fff;
+  border: 2px #fff solid;
+  text-transform: uppercase;
+  padding: 15px 50px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+/* Margins */
+
+.my-20 {
+  margin: 20px 0;
+}
+
+.my-30 {
+  margin: 30px 0;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+/* Paddings */
+
+.px-20 {
+  padding: 0 20px;
+}
+
+/* Text */
+
+.text-center {
+  text-align: center;
+}
+
+.text-secondary {
+  color: #7d7f84;
+}
+/***********************************************/
+/* Top section */
+/***********************************************/
+
+#top-section {
+  display: flex;
+  height: calc(100vh - 90px);
+}
+
+/* Sidebar */
+#sidebar {
+  width: 300px;
+  background-color: #000;
+  height: 100%;
+}
+
+/* Main section */
+#main-section {
+  background-color: #141922;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  color: #fff;
+}
+
+/* Main section Header */
+#main-header {
+  height: 90px;
+  background-color: rgba(8, 11, 18, 0.5);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 5px;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav li a {
+  text-transform: uppercase;
+  margin: 0 25px;
+  color: #7d7f84;
+}
+
+.col {
+  margin: 0 18px 0 0;
+}
+
+/***********************************************/
+/* Bottom section */
+/***********************************************/
+#bottom-section {
+  height: 90px;
+  background-color: #282828;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+}
+
+/*******************************************************************************/
+/*******************************************************************************/
+/* MEDIA QUERIES */
+/*******************************************************************************/
+/*******************************************************************************/
