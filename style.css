@@ -6,17 +6,38 @@
   box-sizing: border-box;
 }
 
+/* Generics */
+
 body {
   font-family: "Montserrat", sans-serif;
-  height: 100vh;
+
+  overflow: hidden;
 }
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 li {
   list-style-type: none;
+}
+
+h2 {
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+}
+
+p {
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 img {
@@ -31,6 +52,10 @@ img {
   border: 1px red solid;
 }
 
+.debugg {
+  border: 1px green solid;
+}
+
 .d-flex {
   display: flex;
 }
@@ -39,26 +64,99 @@ img {
   justify-content: space-between;
 }
 
+.space-around {
+  justify-content: space-around;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-y {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
 .wrap {
   flex-wrap: wrap;
 }
 
+/* Width */
+
 .w-15 {
-  max-width: 15%;
+  width: 15%;
+}
+
+.w-33 {
+  width: 33%;
+}
+
+/* Active */
+
+.active {
+  height: 2px;
+  width: 30px;
+  background-color: #adff2f;
+  position: relative;
+  top: 2px;
+  left: 40px;
+}
+
+.active-vertical {
+  height: 30px;
+  width: 3px;
+  background-color: #adff2f;
+  position: absolute;
+  left: 0%;
 }
 
 /* Buttons */
 
 .btn {
   color: #fff;
-  border: 2px #fff solid;
+  border: 1px #fff solid;
   text-transform: uppercase;
-  padding: 15px 50px;
+  padding: 12px 35px;
   border-radius: 30px;
   display: inline-block;
+  transition: transform 0.5s;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: scale(1.07);
 }
 
 /* Margins */
+
+/* MX */
+
+.mx-5 {
+  margin: 0 5px;
+}
+
+.mx-10 {
+  margin: 0 10px;
+}
+
+.mx-20 {
+  margin: 0 20px;
+}
+
+/* MY */
+
+.my-10 {
+  margin: 10px 0;
+}
 
 .my-20 {
   margin: 20px 0;
@@ -67,6 +165,44 @@ img {
 .my-30 {
   margin: 30px 0;
 }
+
+.my-40 {
+  margin: 40px 0;
+}
+
+/* ML */
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+/* MR */
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-50 {
+  margin-right: 50px;
+}
+
+/* MT */
 
 .mt-20 {
   margin-top: 20px;
@@ -80,8 +216,14 @@ img {
   margin-top: 50px;
 }
 
+/* MB */
+
 .mb-10 {
   margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
 }
 
 .mb-30 {
@@ -93,6 +235,14 @@ img {
 }
 
 /* Paddings */
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-20 {
+  padding: 20px;
+}
 
 .px-20 {
   padding: 0 20px;
@@ -107,6 +257,18 @@ img {
 .text-secondary {
   color: #7d7f84;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Separator */
+.separator {
+  height: 1px;
+  width: 100%;
+  background-color: #7d7f84;
+}
+
 /***********************************************/
 /* Top section */
 /***********************************************/
@@ -116,19 +278,118 @@ img {
   height: calc(100vh - 90px);
 }
 
-/* Sidebar */
+/***********************************************/
+/* SIDEBAR */
+/***********************************************/
+
 #sidebar {
-  width: 300px;
+  width: 270px;
   background-color: #000;
-  height: 100%;
+  padding: 20px 20px 10px 20px;
+  position: relative;
+  color: #fff;
 }
 
-/* Main section */
+/* Logo */
+#logo {
+  width: 130px;
+}
+
+#logo-small {
+  display: none;
+  width: 20px;
+}
+
+/* Sidebar bottom */
+.sidebar-bottom {
+  position: sticky;
+  height: 90px;
+  top: 80%;
+}
+
+/* Sidebar menu icons */
+.sidebar-menu .icons img {
+  color: #fff;
+  width: 25px;
+  margin: 5px 0;
+}
+
+.sidebar-menu .icons img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* Sidebar menu icons text */
+.labels span {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.labels span:hover,
+.playlist-btn:hover h3,
+.download-app h5:hover,
+#download:hover {
+  color: #fff;
+  cursor: pointer;
+}
+/* -------------------------------------------------------------------- */
+
+/* Sidebar PLaylist */
+
+.playlist {
+  overflow-y: auto;
+}
+
+.playlist a:hover {
+  color: #fff;
+}
+
+/* Playlist title */
+/* Playlist button */
+.playlist-title .fa-square-plus {
+  font-size: 2.8rem;
+}
+
+.playlist-title .fa-square-plus:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Playlist links */
+
+.playlist ul a {
+  color: #7d7f84;
+
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.playlist h3:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Playlist bottom */
+
+/* Download app button */
+#download {
+  width: 20px;
+}
+
+/* User image */
+.sidebar-bottom #user-image {
+  width: 30px;
+  height: 30px;
+  background-color: #7d7f84;
+  border-radius: 50%;
+}
+
+/* Main section ************************************************************/
 #main-section {
   background-color: #141922;
   height: 100%;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   color: #fff;
 }
 
@@ -143,33 +404,206 @@ img {
   align-items: center;
   justify-content: flex-end;
   padding: 0 5px;
+  z-index: 5;
 }
 
-/* Navbar */
-nav {
-  display: flex;
-  justify-content: center;
-}
+/* Main section body */
 
-nav li a {
+/* Recently Played */
+
+#main-section li a {
   text-transform: uppercase;
-  margin: 0 25px;
+  margin: 0 10px;
   color: #7d7f84;
+  transition: color 0.3s;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
-.col {
-  margin: 0 18px 0 0;
+#main-section li a:hover {
+  color: #fff;
+}
+
+/* Recently played */
+
+/* Cards */
+.main-content .card {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.main-content .card-image {
+  position: relative;
+}
+
+/* Cards hover */
+.main-content .card-image:hover img {
+  filter: opacity(0.5);
+}
+
+.main-content .fa-circle-play {
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.main-content .card-image:hover .fa-circle-play {
+  display: block;
+  z-index: 1;
+  transition: all 0.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-content .col {
+  margin: 0 15px 0 0;
 }
 
 /***********************************************/
 /* Bottom section */
 /***********************************************/
+
 #bottom-section {
   height: 90px;
   background-color: #282828;
   position: sticky;
   bottom: 0;
   left: 0;
+  color: #fff;
+}
+
+/* #bottom-section > div {
+  height: 100%;
+} */
+
+/* Bottom section left side */
+
+.left {
+  width: 220px;
+  padding-left: 10px;
+}
+/* Song image */
+
+#artist-name {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+#song-name {
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+#song-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#song-image {
+  width: 40px;
+}
+
+/* Fav Icon */
+
+.fav-icon .fa-solid {
+  font-size: 0.7rem;
+}
+.fav-icon .fa-heart:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.fav-icon .fa-folder:hover {
+  color: rgb(230, 220, 74);
+  cursor: pointer;
+}
+
+.right {
+  width: 16%;
+}
+
+/* Bottom section Center  */
+.center {
+  width: calc(100% - 500px);
+}
+
+#bottom-section .controls-bottom {
+  width: 80%;
+}
+
+.timing {
+  font-size: 0.6rem;
+}
+
+.circle {
+  background-color: #c1c1c1;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/* Bottom section Right */
+/* Icon size */
+.volume-controls .fa-solid {
+  font-size: 0.8rem;
+}
+
+/* Play button hover */
+.fa-circle-play:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.volume-bar {
+  height: 4px;
+  background-color: #5a5a5a;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.volume-bar-progress {
+  height: 4px;
+  border-radius: 5px;
+
+  width: 30%;
+  background-color: #c1c1c1;
+  position: relative;
+}
+
+.song-bar {
+  height: 4px;
+  background-color: #5a5a5a;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.song-bar-progress {
+  height: 4px;
+  border-radius: 5px;
+
+  width: 30%;
+  background-color: #c1c1c1;
+  position: relative;
+}
+
+.song-bar:hover .song-bar-progress,
+.volume-bar:hover .volume-bar-progress {
+  background-color: #adff2f;
+  cursor: pointer;
+}
+
+.song-bar:hover .circle,
+.volume-bar:hover .circle {
+  display: block;
 }
 
 /*******************************************************************************/
@@ -177,3 +611,136 @@ nav li a {
 /* MEDIA QUERIES */
 /*******************************************************************************/
 /*******************************************************************************/
+
+/* Breakpoint 992px MD */
+
+@media screen and (max-width: 992px) {
+  .main-content .col {
+    width: 22%;
+  }
+  /* Bottom section */
+  .left {
+    width: 220px;
+  }
+
+  .right {
+    width: 20%;
+  }
+
+  .center {
+    width: 50%;
+  }
+
+  /* Car hover icon size */
+  .card-image .fa-circle-play {
+    font-size: 3rem;
+  }
+}
+
+/* Breakpoint 768px S */
+
+@media screen and (max-width: 768px) {
+  .main-content .col {
+    width: 45%;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  #main-section nav ul {
+    height: 100px;
+  }
+
+  /* Bottom section */
+  .left {
+    width: 205px;
+  }
+
+  .right {
+    width: 25%;
+  }
+
+  .center {
+    width: 50%;
+  }
+
+  /* Breakpoint 576px XS */
+
+  @media screen and (max-width: 576px) {
+    .main-content .col {
+      width: 46%;
+    }
+
+    h3 {
+      font-size: 0.8rem;
+    }
+
+    h4 {
+      font-size: 0.5rem;
+    }
+
+    /* Sidebar */
+
+    #sidebar {
+      width: 50px;
+      padding: 0 10px;
+    }
+
+    #logo {
+      display: none;
+    }
+
+    #logo-small {
+      display: block;
+    }
+
+    /* Hide icon text */
+
+    .sidebar-menu .labels {
+      display: none;
+    }
+    /* Hide playlist section */
+    .playlist,
+    .playlist-title {
+      display: none;
+    }
+
+    /* .sidebar-bottom img {
+      width: 60px;
+    } */
+
+    .sidebar-bottom h5 {
+      display: none;
+    }
+
+    /* Bottom section */
+
+    .left {
+      width: 25%;
+    }
+
+    .right {
+      width: 29%;
+    }
+
+    .center {
+      width: 50%;
+    }
+
+    /* Change icons direction */
+    .fav-icon {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .fav-icon .fa-solid {
+      margin: 3px;
+    }
+
+    /* Card hover icon size */
+    .card-image .fa-circle-play {
+      font-size: 3rem;
+    }
+  }
+}

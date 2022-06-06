@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,9 +14,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
 
     <!-- Font awesome -->
 
@@ -29,27 +32,110 @@
     />
   </head>
   <body>
-    <!-- Top section -->
-    <div id="top-section">
-      <!-- Sidebar -->
-      <div id="sidebar"></div>
+    <!------------------------------------------------------------------------->
+    <!-- TOP SECTION----------------------------------------------------------->
+    <!------------------------------------------------------------------------->
 
-      <!-- Main section -->
+    <!-- Contiene la sidebar e main section -->
+    <div id="top-section">
+      <!-- Sidebar --------------------------------------------->
+      <div id="sidebar" class="d-flex flex-column">
+        <!-- Sidebar Top -->
+        <div class="sidebar-top">
+          <!-- Logo -->
+          <div class="logo mb-30">
+            <img id="logo" src="./img/logo.svg" alt="" />
+          </div>
+
+          <!-- Sidebar top section menu -->
+          <div class="sidebar-menu d-flex">
+            <!-- icons -->
+            <div class="icons d-flex flex-column align-y">
+              <!-- Logo small -->
+              <img id="logo-small" src="./img/logo-small.svg" alt="" />
+
+              <img src="./img/home.svg" alt="" />
+              <img src="./img/search.svg" alt="" />
+              <img src="./img/libreria.svg" alt="" />
+            </div>
+
+            <!--Icons Labels -->
+            <div class="labels d-flex flex-column space-around ml-5">
+              <span class="text-secondary">Home</span>
+              <span class="text-secondary">Cerca</span>
+              <span class="text-secondary">La tua libreria</span>
+            </div>
+          </div>
+          <!-- Playlist title -->
+          <div class="playlist-title">
+            <h4 class="uppercase mb-10 my-20">Playlist</h4>
+            <!-- Playlist button -->
+            <div class="playlist-btn d-flex align-y">
+              <i class="fa-solid fa-square-plus"></i>
+              <h3 class="ml-10 text-secondary">Crea Playlist</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist">
+          <!-- Playlist -->
+          <ul>
+            <li class="my-20"><a href="#">Nome Playlist</a></li>
+            <li class="my-20"><a href="#">Nome Playlist</a></li>
+            <li class="my-20"><a href="#">Nome Playlist</a></li>
+            <li class="my-20"><a href="#">Nome Playlist</a></li>
+            <li class="my-20"><a href="#">Nome Playlist</a></li>
+            <li class="my-20"><a href="#">Nome Playlist</a></li>
+            <li class="my-20"><a href="#">Nome Playlist</a></li>
+          </ul>
+        </div>
+        <!-- Sidebar bottom -->
+        <div class="sidebar-bottom">
+          <!-- Download app -->
+          <div class="download-app d-flex align-y">
+            <!-- <i class="fa-solid fa-circle-arrow-down ml-5 text-secondary"></i> -->
+            <img id="download" src="./img/download.svg" alt="" />
+            <h5 class="ml-10 text-secondary">Installa app</h5>
+          </div>
+          <!-- Separator -->
+          <div class="separator my-10"></div>
+          <!-- User name -->
+          <div class="user-name d-flex align-y">
+            <!-- User icon -->
+            <div class="user-image">
+              <img id="user-image" src="./img/profile.svg" alt="" />
+            </div>
+            <h5 class="ml-10">Salvatore Demontis</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main section ------------------------------------------------------>
+
       <div id="main-section">
         <!-- Main section header -->
         <div id="main-header">
-          <a href="#" class="btn">Effettua l'upgrade</a>
+          <!-- Upgrade button -->
+          <a href="#" class="btn mr-5">Effettua l'upgrade</a>
         </div>
 
         <!-- Navbar -->
-        <nav class="my-30">
-          <li><a href="#">in evidenza</a></li>
-          <li><a href="#">Podcast</a></li>
-          <li><a href="#">Classifiche</a></li>
-          <li><a href="#">Generi e mood</a></li>
-          <li><a href="#">Nuove uscite</a></li>
-          <li><a href="#">Scopri</a></li>
+        <nav class="my-20">
+          <ul class="d-flex justify-center wrap px-20">
+            <li>
+              <a href="#">in evidenza</a>
+              <div class="active"></div>
+            </li>
+
+            <li><a href="#">Podcast</a></li>
+            <li><a href="#">Classifiche</a></li>
+            <li><a href="#">Generi e mood</a></li>
+            <li><a href="#">Nuove uscite</a></li>
+            <li><a href="#">Scopri</a></li>
+          </ul>
         </nav>
+
         <!-- Main content -->
         <div class="main-content px-20">
           <!-- Recently played -->
@@ -61,6 +147,8 @@
               <div class="card">
                 <!-- Card image -->
                 <div class="card-image">
+                  <!-- Play icon -->
+                  <i class="fa-solid fa-circle-play"></i>
                   <img src="./img/metal_lifting.jpg" alt="" />
                 </div>
                 <!-- Card text -->
@@ -70,27 +158,38 @@
                 </div>
               </div>
             </div>
+
             <!-- Column -->
             <div class="col w-15">
               <!-- Card -->
               <div class="card">
                 <!-- Card image -->
                 <div class="card-image">
+                  <!-- Play icon -->
+                  <i class="fa-solid fa-circle-play"></i>
+
                   <img src="./img/stranger.jpeg" alt="" />
                 </div>
                 <!-- Card text -->
                 <div class="card-text text-center my-20">
-                  <h3 class="mb-10">Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h3>
+                  <h3 class="mb-10">
+                    Stranger Things, Vol.1 (a Netflix Original Series
+                    Soundtrack)
+                  </h3>
                   <h4 class="text-secondary">Kyle Dixon & Michael Stein</h4>
                 </div>
               </div>
             </div>
+
             <!-- Column -->
             <div class="col w-15">
               <!-- Card -->
               <div class="card">
                 <!-- Card image -->
                 <div class="card-image">
+                  <!-- Play icon -->
+                  <i class="fa-solid fa-circle-play"></i>
+
                   <img src="./img/aquietplace.jpeg" alt="" />
                 </div>
                 <!-- Card text -->
@@ -100,12 +199,16 @@
                 </div>
               </div>
             </div>
+
             <!-- Column -->
             <div class="col w-15">
               <!-- Card -->
               <div class="card">
                 <!-- Card image -->
                 <div class="card-image">
+                  <!-- Play icon -->
+                  <i class="fa-solid fa-circle-play"></i>
+
                   <img src="./img/split.jpeg" alt="" />
                 </div>
                 <!-- Card text -->
@@ -115,27 +218,35 @@
                 </div>
               </div>
             </div>
+
             <!-- Column -->
             <div class="col w-15">
               <!-- Card -->
               <div class="card">
                 <!-- Card image -->
                 <div class="card-image">
+                  <!-- Play icon -->
+                  <i class="fa-solid fa-circle-play"></i>
+
                   <img src="./img/cure.jpeg" alt="" />
                 </div>
                 <!-- Card text -->
                 <div class="card-text text-center my-20">
-                  <h3 class="mb-10">A cure for weliness</h3>
+                  <h3 class="mb-10">A cure for wellness</h3>
                   <h4 class="text-secondary">Subtitle</h4>
                 </div>
               </div>
             </div>
+
             <!-- Column -->
             <div class="col w-15">
               <!-- Card -->
               <div class="card">
                 <!-- Card image -->
                 <div class="card-image">
+                  <!-- Play icon -->
+                  <i class="fa-solid fa-circle-play"></i>
+
                   <img src="./img/sinister.jpeg" alt="" />
                 </div>
                 <!-- Card text -->
@@ -154,6 +265,7 @@
             <p class="mt-20 text-secondary">
               Più ascolti, più accurati saranno i suggerimenti.
             </p>
+
             <div class="d-flex">
               <!-- Column -->
               <div class="col w-15">
@@ -161,6 +273,9 @@
                 <div class="card mt-30">
                   <!-- Card image -->
                   <div class="card-image">
+                    <!-- Play icon -->
+                    <i class="fa-solid fa-circle-play"></i>
+
                     <img src="./img/radar.jpeg" alt="" />
                   </div>
                   <!-- Card text -->
@@ -169,12 +284,16 @@
                   </div>
                 </div>
               </div>
+
               <!-- Column -->
               <div class="col w-15 mt-30">
                 <!-- Card -->
                 <div class="card mt-30">
                   <!-- Card image -->
                   <div class="card-image">
+                    <!-- Play icon -->
+                    <i class="fa-solid fa-circle-play"></i>
+
                     <img src="./img/mixdaily.jpeg" alt="" />
                   </div>
                   <!-- Card text -->
@@ -200,6 +319,9 @@
                 <div class="card mt-30">
                   <!-- Card image -->
                   <div class="card-image">
+                    <!-- Play icon -->
+                    <i class="fa-solid fa-circle-play"></i>
+
                     <img src="./img/youg.jpeg" alt="" />
                   </div>
                   <!-- Card text -->
@@ -208,12 +330,15 @@
                   </div>
                 </div>
               </div>
+
               <!-- Column -->
               <div class="col w-15 mt-30">
                 <!-- Card -->
                 <div class="card mt-30">
                   <!-- Card image -->
                   <div class="card-image">
+                    <!-- Play icon -->
+                    <i class="fa-solid fa-circle-play"></i>
                     <img src="./img/einaudi.jpeg" alt="" />
                   </div>
                   <!-- Card text -->
@@ -224,13 +349,75 @@
               </div>
             </div>
           </div>
-
-          <!-- BOXES---------------------------------------------------------- -->
         </div>
       </div>
     </div>
+    <!------------------------------------------------------------------------->
+    <!-- BOTTOM SECTION ------------------------------------------------------->
+    <!------------------------------------------------------------------------->
 
-    <!-- Bottom section -->
-    <div id="bottom-section"></div>
+    <div id="bottom-section" class="d-flex space-between">
+      <div class="left d-flex align-y">
+        <!-- Song Image -->
+        <img id="song-image" class="mr-10" src="./img/sinister.jpeg" alt="" />
+
+        <div class="d-flex space-between">
+          <!-- Song info -->
+          <div class="song-info d-flex flex-column">
+            <span id="artist-name">Sinister</span>
+            <span id="song-name">Brano Nome</span>
+          </div>
+          <!-- Fav icon -->
+          <div class="fav-icon d-flex ml-30">
+            <i class="fa-solid fa-heart mx-10"></i>
+            <i class="fa-solid fa-folder"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="center d-flex flex-column justify-center align-y">
+        <!-- Controls -->
+        <!-- Top section -->
+        <div class="controls-top d-flex justify-center align-y my-10">
+          <i class="fa-solid fa-shuffle mx-10"></i>
+          <i class="fa-solid fa-backward-step mx-10"></i>
+          <i class="fa-solid fa-circle-play fa-2x mx-10"></i>
+          <i class="fa-solid fa-forward-step mx-10"></i>
+          <i class="fa-solid fa-rotate-right mx-10"></i>
+        </div>
+
+        <!-- Bottom section -->
+        <div class="controls-bottom d-flex justify-center align-y">
+          <!-- Time -->
+          <span class="timing mx-10">0:25</span>
+
+          <!-- Song progress bar -->
+          <div class="song-bar">
+            <div class="song-bar-progress">
+              <!--Bar Circle -->
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <!-- Time -->
+          <span class="timing mx-10">4:35</span>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="volume-controls flex-end d-flex align-y my-40">
+          <i class="fa-solid fa-list-ul mx-10"></i>
+          <i class="fa-solid fa-display mx-10"></i>
+          <i class="fa-solid fa-volume-high mx-10"></i>
+          <!-- Volume progress bar -->
+          <div class="volume-bar mr-10">
+            <div class="volume-bar-progress">
+              <!--Bar Circle -->
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
