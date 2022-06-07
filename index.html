@@ -148,7 +148,7 @@
                 <!-- Card image -->
                 <div class="card-image">
                   <!-- Play icon -->
-                  <i class="fa-solid fa-circle-play"></i>
+                  <i class="fa-regular fa-circle-play"></i>
                   <img src="./img/metal_lifting.jpg" alt="" />
                 </div>
                 <!-- Card text -->
@@ -166,7 +166,7 @@
                 <!-- Card image -->
                 <div class="card-image">
                   <!-- Play icon -->
-                  <i class="fa-solid fa-circle-play"></i>
+                  <i class="fa-regular fa-circle-play"></i>
 
                   <img src="./img/stranger.jpeg" alt="" />
                 </div>
@@ -188,7 +188,7 @@
                 <!-- Card image -->
                 <div class="card-image">
                   <!-- Play icon -->
-                  <i class="fa-solid fa-circle-play"></i>
+                  <i class="fa-regular fa-circle-play"></i>
 
                   <img src="./img/aquietplace.jpeg" alt="" />
                 </div>
@@ -207,7 +207,7 @@
                 <!-- Card image -->
                 <div class="card-image">
                   <!-- Play icon -->
-                  <i class="fa-solid fa-circle-play"></i>
+                  <i class="fa-regular fa-circle-play"></i>
 
                   <img src="./img/split.jpeg" alt="" />
                 </div>
@@ -226,7 +226,7 @@
                 <!-- Card image -->
                 <div class="card-image">
                   <!-- Play icon -->
-                  <i class="fa-solid fa-circle-play"></i>
+                  <i class="fa-regular fa-circle-play"></i>
 
                   <img src="./img/cure.jpeg" alt="" />
                 </div>
@@ -245,7 +245,7 @@
                 <!-- Card image -->
                 <div class="card-image">
                   <!-- Play icon -->
-                  <i class="fa-solid fa-circle-play"></i>
+                  <i class="fa-regular fa-circle-play"></i>
 
                   <img src="./img/sinister.jpeg" alt="" />
                 </div>
@@ -274,7 +274,7 @@
                   <!-- Card image -->
                   <div class="card-image">
                     <!-- Play icon -->
-                    <i class="fa-solid fa-circle-play"></i>
+                    <i class="fa-regular fa-circle-play"></i>
 
                     <img src="./img/radar.jpeg" alt="" />
                   </div>
@@ -292,7 +292,7 @@
                   <!-- Card image -->
                   <div class="card-image">
                     <!-- Play icon -->
-                    <i class="fa-solid fa-circle-play"></i>
+                    <i class="fa-regular fa-circle-play"></i>
 
                     <img src="./img/mixdaily.jpeg" alt="" />
                   </div>
@@ -320,7 +320,7 @@
                   <!-- Card image -->
                   <div class="card-image">
                     <!-- Play icon -->
-                    <i class="fa-solid fa-circle-play"></i>
+                    <i class="fa-regular fa-circle-play"></i>
 
                     <img src="./img/youg.jpeg" alt="" />
                   </div>
@@ -338,7 +338,7 @@
                   <!-- Card image -->
                   <div class="card-image">
                     <!-- Play icon -->
-                    <i class="fa-solid fa-circle-play"></i>
+                    <i class="fa-regular fa-circle-play"></i>
                     <img src="./img/einaudi.jpeg" alt="" />
                   </div>
                   <!-- Card text -->
@@ -357,31 +357,32 @@
     <!------------------------------------------------------------------------->
 
     <div id="bottom-section" class="d-flex space-between">
-      <div class="left d-flex align-y">
+      <div class="left d-flex align-y debug">
         <!-- Song Image -->
         <img id="song-image" class="mr-10" src="./img/sinister.jpeg" alt="" />
 
-        <div class="d-flex space-between">
+        <div class="wrapper d-flex space-between">
           <!-- Song info -->
-          <div class="song-info d-flex flex-column">
+          <div class="song-info d-flex flex-column ">
             <span id="artist-name">Sinister</span>
             <span id="song-name">Brano Nome</span>
           </div>
           <!-- Fav icon -->
-          <div class="fav-icon d-flex ml-30">
+          <div class="fav-icon d-flex ml-30 ">
             <i class="fa-solid fa-heart mx-10"></i>
             <i class="fa-solid fa-folder"></i>
           </div>
         </div>
+        
       </div>
 
-      <div class="center d-flex flex-column justify-center align-y">
+      <div class="center d-flex flex-column justify-center align-y debug">
         <!-- Controls -->
         <!-- Top section -->
         <div class="controls-top d-flex justify-center align-y my-10">
           <i class="fa-solid fa-shuffle mx-10"></i>
           <i class="fa-solid fa-backward-step mx-10"></i>
-          <i class="fa-solid fa-circle-play fa-2x mx-10"></i>
+          <i class="fa-regular fa-circle-play fa-2x mx-10"></i>
           <i class="fa-solid fa-forward-step mx-10"></i>
           <i class="fa-solid fa-rotate-right mx-10"></i>
         </div>
@@ -404,14 +405,17 @@
         </div>
       </div>
 
-      <div class="right">
-        <div class="volume-controls flex-end d-flex align-y my-40">
+      <div class="right debug">
+        <div class="volume-controls flex-end d-flex  align-y my-40">
           <i class="fa-solid fa-list-ul mx-10"></i>
           <i class="fa-solid fa-display mx-10"></i>
-          <i class="fa-solid fa-volume-high mx-10"></i>
           <!-- Volume progress bar -->
-          <div class="volume-bar mr-10">
-            <div class="volume-bar-progress">
+          <div class="volume-icon-bar d-flex align-y">
+
+            <i class="fa-solid fa-volume-high mx-10"></i>
+            <div class="volume-bar mr-10 d-flex">
+              <div class="volume-bar-progress">
+          </div>
               <!--Bar Circle -->
               <div class="circle"></div>
             </div>
